@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 public class GigatronShopTest extends BaseTest{
 
     PopupPage popupPage;
+    HomePage homePage;
 
 
     @BeforeMethod
@@ -13,6 +14,7 @@ public class GigatronShopTest extends BaseTest{
 
         driver = openBrowser();
         popupPage = new PopupPage(driver);
+        homePage= new HomePage(driver);
 
     }
 
@@ -20,6 +22,7 @@ public class GigatronShopTest extends BaseTest{
     public void ShopTest(){
         popupPage.clickOnPopup();
         popupPage.clickPrihvati();
+        homePage.inputSearch("Samsung");
     }
 
 
